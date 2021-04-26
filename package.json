@@ -1,0 +1,24 @@
+{
+  "name": "scraper-api-vercel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dyonisio/scraper-api-vercel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dyonisio/scraper-api-vercel/issues"
+  },
+  "homepage": "https://github.com/dyonisio/scraper-api-vercel#readme",
+  "dependencies": {
+    "playwright-aws-lambda": "^0.6.0",
+    "playwright-core": "^1.10.0"
+  }
+}
