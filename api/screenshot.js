@@ -6,12 +6,8 @@ module.exports = async (req, res) => {
     try {
         if (query.url && isValidUrl(query.url)) {
             browser = await playwright.launchChromium({ headless: true })
-            const context = await browser.newContext()
-            const page = await context.newPage()
-            await page.goto(query.url)
-            const screenshot = await page.screenshot({ type: "png" })
-            res.setHeader("Content-Type", "image/png")
-            res.status(200).send(screenshot)
+
+            res.status(200)
         } else throw "Please provide a valid url"
     } catch (error) {
         res.status(500).send({
