@@ -1,6 +1,7 @@
 const playwright = require("playwright-aws-lambda")
 
 module.exports = async (req, res) => {
+    //Update
     let browser = null
     const { query } = req
     try {
