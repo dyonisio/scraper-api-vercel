@@ -1,7 +1,6 @@
 const playwright = require("playwright-aws-lambda")
 
 module.exports = async (req, res) => {
-    //Update
     let browser = null
     const { query } = req
     try {
@@ -17,7 +16,7 @@ module.exports = async (req, res) => {
     } catch (error) {
         res.status(500).send({
             status: "Failed",
-            error,
+            error: `Error: ${error.name} | Message ${error.message}`,
         })
     } finally {
         if (browser !== null) {
